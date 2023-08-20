@@ -25,7 +25,7 @@ public class TestCardDelivery {
         $("[data-test-id = 'date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         $("[data-test-id = 'date'] input").setValue(date);
         $("[data-test-id= 'name'] input").setValue("Никитин Александр");
-        $("[data-test-id = 'phone'] input").setValue("+79007778990");
+        $("[data-test-id = 'phone'] input").setValue("+79012345678");
         $("[data-test-id = 'agreement']").click();
         $$("[type = button]").find(exactText("Забронировать")).click();
         $("[data-test-id = 'notification']").shouldHave(exactText("Успешно! Встреча успешно забронирована на " + date), Duration.ofMillis(15000)).shouldBe(exist);
